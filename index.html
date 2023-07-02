@@ -71,108 +71,37 @@
 					
 					
 					
-					<a href="http://www.wxlaixue.com">Powered 来学网-高老师 ©2017-2023</a>
+					<a href="https://www.laixue.com/">Powered 来学网-高老师 ©2017-2023</a>
 					
-					<SCRIPT language=JavaScript>
-
-<!--
-
-var caution = false
-
-function setCookie(name, value, expires, path, domain, secure) {
-
-var curCookie = name + "=" + escape(value) +
-
-((expires) ? "; expires=" + expires.toGMTString() : "") +
-
-((path) ? "; path=" + path : "") +
-
-((domain) ? "; domain=" + domain : "") +
-
-((secure) ? "; secure" : "")
-
-if (!caution || (name + "=" + escape(value)).length <= 4000)
-
-document.cookie = curCookie
-
-else
-
-if (confirm("Cookie exceeds 4KB and will be cut!"))
-
-document.cookie = curCookie
-
-}
-
-function getCookie(name) {
-
-var prefix = name + "="
-
-var cookieStartIndex = document.cookie.indexOf(prefix)
-
-if (cookieStartIndex == -1)
-
-return null
-
-var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
-
-if (cookieEndIndex == -1)
-
-cookieEndIndex = document.cookie.length
-
-return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
-
-}
-
-function deleteCookie(name, path, domain) {
-
-if (getCookie(name)) {
-
-document.cookie = name + "=" +
-
-((path) ? "; path=" + path : "") +
-
-((domain) ? "; domain=" + domain : "") +
-
-"; expires=Thu, 01-Jan-70 00:00:01 GMT"
-
-}
-
-}
-
-function fixDate(date) {
-
-var base = new Date(0)
-
-var skew = base.getTime()
-
-if (skew > 0)
-
-date.setTime(date.getTime() - skew)
-
-}
-
-var now = new Date()
-
-fixDate(now)
-
-now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
-
-var visits = getCookie("counter")
-
-if (!visits)
-
-visits = 1
-
-else
-
-visits = parseInt(visits) + 1
-
-setCookie("counter", visits, now)
-
-document.write("欢迎光临本站，您是第" + visits + "位访问者！")
-
-// -->
-
+<div class="showTime">当前时间：2021年2月19-20时35分16秒</div>
+<script>
+  var t = null;
+  t = setTimeout(time, 1000); //開始运行
+  function time() {
+    clearTimeout(t); //清除定时器
+    dt = new Date();
+    var y = dt.getFullYear();
+    var mt = dt.getMonth() + 1;
+    var day = dt.getDate();
+    var h = dt.getHours(); //获取时
+    var m = dt.getMinutes(); //获取分
+    var s = dt.getSeconds(); //获取秒
+    document.querySelector(".showTime").innerHTML =
+      "当前时间：" +
+      y +
+      "年" +
+      mt +
+      "月" +
+      day +
+      "-" +
+      h +
+      "时" +
+      m +
+      "分" +
+      s +
+      "秒";
+    t = setTimeout(time, 1000); //设定定时器，循环运行
+  }
 </SCRIPT>
 
 				</div>
