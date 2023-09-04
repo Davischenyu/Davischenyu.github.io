@@ -1,5 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+ <script language="javascript" type="text/javascript">
+        function gotoserch() {
+            var key = document.getElementById("keyword").value.replace(/(^\s*)|(\s*$)/g, ""); 
+            if(key=="")
+                alert('请输入查询内容');
+            else
+                window.parent.location.href = '../Exam/Registration/CztSerch.aspx?key=' + key;
+        }
+
+        //这是首次加载显示的*************************   
+  
+    //这里是每隔一秒调用一次改变时分秒的函数*********************************　　
+        $(function() {
+        var myDate = new Date();
+        var year = myDate.getFullYear(); //获取年
+        var month = myDate.getMonth() + 1; //获取月，默认从0开始，所以要加一
+        var date = myDate.getDate(); //获取日
+        var hours = myDate.getHours(); //获取小时
+        var minutes = myDate.getMinutes(); //获取分
+        var seconds = myDate.getSeconds(); //获取秒
+        var weekend = myDate.getDay(); //获取星期几，这里获得到的是数字1-7，所以我下面自己new了一个数组把获取到的数字当下标
+        var weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+        var day = weeks[weekend]//这样就是显示的星期x了　　//这些if判断是在小于10的时候前面自动补0
+        if (month < 10) {
+            month = '0' + month
+        }
+        if (date < 10) {
+            date = '0' + date
+        }
+        if (hours < 10) {
+            hours = '0' + hours
+        }
+        if (minutes < 10) {
+            minutes = '0' + minutes
+        }
+        if (seconds < 10) {
+            seconds = '0' + seconds
+        }
+        // $("#id").html() = ""; //或者$("#id").html("test");　
+
+        $("#u_information").append("<span class='year' style='color:Black'>" + year + "年" + month + "月" + date + "日</span>" + " "); //拼接年月日
+        $("#u_information").append("<span class='hours' style='color:Black'>" + hours + ":" + minutes + ":" + seconds + "</span>" + " "); //拼接时分秒
+        $("#u_information").append("<span class='day' style='color:Black'>" + day + "</span>" + " "); //星期几
+    
+        setInterval("changeTime();",1000); //每隔一秒运行一次
+    })
+    function changeTime() {
+        myDate = new Date();
+        year = myDate.getFullYear();
+        month = myDate.getMonth() + 1;
+        date = myDate.getDate();
+        hours = myDate.getHours();
+        minutes = myDate.getMinutes();
+        seconds = myDate.getSeconds();
+        weekend = myDate.getDay(); 
+        weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+        day = weeks[weekend]
+        if (month<10) {
+            month = '0'+month
+        }
+        if (date<10) {
+            date = '0'+date
+        }
+        if (hours<10) {
+            hours = '0'+hours
+        }
+        if (minutes<10) {
+            minutes = '0'+minutes
+        }
+        if (seconds<10) {
+            seconds = '0'+seconds
+        }　　　　　//这里替换第一次加载的数据
+        $('.year').html(year+"年"+month+"月"+date+"日")
+        $('.hours').html(hours+":"+minutes+":"+seconds)
+        $('.day').html(day)
+    }
+        
+    </script>
 
 <head>
   <meta charset="UTF-8">
