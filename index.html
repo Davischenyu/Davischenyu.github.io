@@ -1,145 +1,128 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网站维护中</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: #f5f7fb;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .maintenance-card {
-            max-width: 600px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 50px 40px 40px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .maintenance-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .icon {
-            font-size: 72px;
-            margin-bottom: 16px;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin-bottom: 12px;
-        }
-
-        .sub {
-            font-size: 16px;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .sub strong {
-            color: #1a1a2e;
-            font-weight: 600;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 36px;
-            background: #4f6ef7;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 40px;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.1s;
-            box-shadow: 0 6px 20px rgba(79, 110, 247, 0.3);
-        }
-
-        .btn:hover {
-            background: #3b5de7;
-            transform: scale(1.02);
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        .notice {
-            margin-top: 24px;
-            font-size: 13px;
-            color: #94a3b8;
-            border-top: 1px solid #e9edf4;
-            padding-top: 20px;
-        }
-
-        .notice a {
-            color: #4f6ef7;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .notice a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 480px) {
-            .maintenance-card {
-                padding: 30px 20px 30px;
+<meta charset="utf-8" />
+<title>个人发布页</title>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="author"content="413752269">
+<meta name="keywords" content="理想阁论坛引导页,高晨煜个人引导页,高晨煜个人主页">
+<meta name="description" content="李苒晴学习社个人引导页,李苒晴学习社个人引导页,李苒晴学习社个人主页">
+<style>
+*{margin:0;padding:0;font-family: "微软雅黑";box-sizing: border-box;}
+      body{min-height:100vh;padding:140px 0;background:linear-gradient(to right, #bb313e25, #bb313e25, #d7222925, #dd4a1625, #e4761525, #f5c50025, #f0e92725, #b1ce2425, #48a93525, #03944525, #157c4f25, #176a5825, #1b556325, #1d386f25, #1d386f25, #20277825, #52266325, #8a244b25);}
+      .main{max-width:1300px;max-width: 350px;margin:0 auto;display: flex;justify-content: center;align-items: center;}
+      .item{flex:1;width:0;height:480px;border-radius:15px;position:relative;padding:5px 30px;}
+      .item img{height:100px;width:100px;padding:10px;border:0px solid rgba(255,255,255,0.5);border-radius:15px;display:block;margin:0 auto;}
+      .item h3{color:#FFF;text-align: center;font-size:24px;line-height:45px;margin-top:0px;}
+      .item p{color:#FFF;line-height:25px;font-size:12px;margin-top:10px;}
+      
+      .item .btns{display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:20px;}
+      .item .btns1{display:flex;flex-direction: row;align-items: center;justify-content: center;margin-top:20px;}
+      .item a{text-decoration:none;display:block;width:250px;line-height:38px;text-align:center;border-radius:100px;background:#FFF;font-size:15px;font-weight:bold;cursor: pointer;}
+      .item a:hover{opacity: 0.8;}
+@media screen and (max-width: 730px) {
+          body{
+              padding:20px;
+          }
+                .main {
+                    display:block;
+                }
+                .item{
+                    width:100%;
+                    margin:0!important;
+                    margin-bottom:15px!important;
+                    transform: scale(1)!important;
+                }
             }
-            .icon { font-size: 56px; }
-            h1 { font-size: 26px; }
-            .btn { padding: 12px 28px; font-size: 15px; }
-        }
-    </style>
+.text-center {
+  text-align: center;
+  text-decoration: none；
+}
+.gonggao {
+    max-width: 350px;
+  margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+  margin-bottom: 20px;
+}
+.JabiTg {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@keyframes shake_button {
+    0% {
+        transform: translateX(3px) rotate(1deg)
+    }
+
+    2.5% {
+        transform: translateX(-3px) rotate(-1deg)
+    }
+
+    5% {
+        transform: translateX(3px) rotate(1deg)
+    }
+
+    7.5% {
+        transform: translateX(-3px) rotate(-1deg)
+    }
+
+    10% {
+        transform: translateX(2px) rotate(1deg)
+    }
+
+    12.5% {
+        transform: translateX(-2px) rotate(-1deg)
+    }
+
+    15% {
+        transform: translateX(2px) rotate(1deg)
+    }
+
+    17.5% {
+        transform: translateX(-2px) rotate(-1deg)
+    }
+
+    20% {
+        transform: translateX(1px) rotate(1deg)
+    }
+
+    22.5% {
+        transform: translateX(-1px) rotate(-1deg)
+    }
+
+    25% {
+        transform: translateX(0) rotate(0deg)
+    }
+}
+</style>
 </head>
 <body>
+<div class="gonggao">
+<a class="JabiBg" style="padding: 0px;" target="_blank" href="https://www.li325.com">
+<img class="JabiTg" src="https://www.li325.com/data/attachment/common/template/boardimg_20260116usc0zca8.svg">
+</a></div>
+<div class="main">
+<div class="item" style="background:linear-gradient(to right, rgb(64, 153, 255), rgb(56, 114, 255));z-index:3;transform:scale(1);">
+<img src="https://liranqing.infinityfree.me/htdocs/var/resizes/%E7%90%86%E6%83%B3%E9%98%81%E5%9B%BE%E6%BA%90%E5%AD%98%E5%82%A8/%E6%9C%AA%E5%91%BD%E5%90%8D%2821%29.jpg?m=1786188905" />
+<h3>个人发布页</h3>
+<h3><p style="color: #FFF;">晨煜素材资源库发布页</p></h3>
+<div class="btns1">
+<a style="color:#3875ff; animation: shake_button 3s linear 0s infinite normal none running;" href="https://www.li325.com" target="_self">理想阁论坛（每日更新）</a>
+<br><br></div>
+<div class="btns">
+<a style="color:#3875ff;animation: shake_button 3s linear 0s infinite normal none running;"margin-left:0px;" href="https://www.li325.com" target="_self">微信公众号：李苒晴学习社</a></div>
+<div class="btns">
+<a style="color:#3875ff;animation: shake_button 3s linear 0s infinite normal none running;"margin-left:0px;" href="https://www.li325.com" target="_self">客服微信：GJY58TC</a></div>
+<div class="btns">
+<a style="color:#3875ff;animation: shake_button 3s linear 0s infinite normal none running;"margin-left:0px;" href="https://www.li325.com" target="_self">客服QQ：413752269</a></div>
 
-    <div class="maintenance-card">
-        <div class="icon">🔧</div>
-        <h1>站点更新维护中</h1>
-        <p class="sub">
-            感谢您的关注！<br>
-            我们正在对网站进行升级与优化，<br>
-            在此期间，您可以通过下方链接访问我们的备用站点。
-        </p>
-
-        <!-- 理想阁官网 -->
-        <a href="https://www.li325.com" target="_blank" class="btn">
-            前往 www.li325.com →
-        </a>
-
-        <div class="notice">
-            如有紧急问题，可发送邮件至 <a href="mailto:liranqing2008@Gmail.com?subject=网站反馈&body=你好，我想咨询...">
-  liranqing2008@Gmail.com
-</a>
-        </div>
-    </div>
-
+</div>
 </body>
 </html>
